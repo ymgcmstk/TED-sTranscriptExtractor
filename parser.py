@@ -41,7 +41,7 @@ class TranscriptParser(HTMLParser):
             self._title = data.split(':')[1].replace(' ', '_')
             return
         if self._flg:
-            self._curstr += data.replace('\n', '') + ' '
+            self._curstr += data.replace('\n', ' ') + ' '
             return
     def save(self, path=None):
         self._transcript.append(self._curstr)
